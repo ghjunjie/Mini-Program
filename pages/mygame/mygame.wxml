@@ -1,19 +1,31 @@
 <!--pages/mygame/mygame.wxml-->
-<button bindtap='onShowGame'>showGame</button>
+<!-- <button bindtap='onShowGame'>showGame</button> -->
 
 <view class='mask'>
+    <view class='t-line1 text' wx:if='{{showRewardText}}'>哪个是”吉”字</view>
+    <view class='t-line2 text' wx:if='{{showRewardText}}'>猜中获得Felix的<text>打赏</text></view>
     <view class='items'>
+     <!--以下为入场动画  -->
+        
         <block wx:for='{{itemsClass}}' wx:key='{{index}}'>
-            <view class='item  {{itemsClass[index]}}  item{{index+1}} {{rotateIndex==index?"rotate":" "}}' data-index='{{index}}' catchtap='onSelectRotateIndex'>
-                <view class='item-text' data-index='{{index}}' catchtap='onSelectRotateIndex'>{{blessText[index]?blessText[index]:index}}</view>
-                <view class='item-bg' data-index='{{index}}' catchtap='onSelectRotateIndex'></view>
+            <view class='item {{showItem&&index!=4?"itemZoomIn":""}}  {{itemsClass[index]}}  item{{index+1}} {{rotateIndex==index?"rotate":" "}}' data-index='{{index}}' catchtap='onSelectRotateIndex'>
+                <view class='item-bg'></view>
+                <view class='item-text {{blessText[index]?"border":"wrong-bg"}}'>{{blessText[index]?blessText[index]:""}}</view>
+            </view>
+        </block>
+       
+        <block wx:for='{{blessText}}' wx:key='{{index}}'>
+            <view class='inItems {{canStartInAnimate?"inItem"+(index+1):""}} {{index==0&&zoomInSelected?"selectedInItem":""}}   {{index!=0&&hideNoFirstInItem?"hideInItem":""}}'  hidden='{{hideInAnimition}}'>
+            
+            <view class='item-text border'>{{blessText[index]}}</view>
+            <view class='inItem-bg {{index==0&&startRotateAndHideInAnimation?"rotate":""}}' ></view>
             </view>
         </block>
     </view>
-    <button bindtap='onChange'>onChange</button>
+    
+    <view class='bt-btns' wx:if='{{canShowPlayBtn}}'>
+        <button bindtap='onPlayAgain'>再试一次</button>
+        <button bindtap='onGiveUp'>放弃</button>
+    </view>
+    <button bindtap='onShowGame' style='position:fixed;bottom:0;'>onShowGame</button>
 </view>
-
-<!--<view class='item  {{itemsClass[index]}}  item{{index+1}} {{rotateIndex==index?"rotate":" "}}' data-index='{{index}}' catchtap='onSelectRotateIndex'>
-                    <view class='item-text' data-index='{{index}}' catchtap='onSelectRotateIndex'>{{blessText[index]?blessText[index]:index}}</view>
-                    <view class='item-bg' data-index='{{index}}' catchtap='onSelectRotateIndex'></view>
-                </view>  -->
