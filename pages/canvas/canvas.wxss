@@ -1,0 +1,133 @@
+.common {
+  float: left;
+  background: #fffcec;
+  background-image: url("https://xcx.feitaikeji.com/img/frame.png");
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.common_noBg {
+  float: left;
+  background: #fffcec;
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  float: left;
+  background: #fffcec;
+  background-image: url("https://xcx.feitaikeji.com/img/img1.png");
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img2 {
+  float: left;
+  background: #fffcec;
+  background-image: url("https://xcx.feitaikeji.com/img/img2.png");
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img3 {
+  float: left;
+  background: #fffcec;
+  background-image: url("https://xcx.feitaikeji.com/img/img3.png");
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img4 {
+  float: left;
+  background: #fffcec;
+  background-image: url("https://xcx.feitaikeji.com/img/img4.png");
+  background-size: 110rpx 110rpx;
+  background-repeat: no-repeat;
+  background-position: 5rpx 5rpx;
+  height: 110rpx;
+  width: 110rpx;
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  color: #d95940;
+  font-size: 65rpx;
+  font-weight: 590;
+  padding: 5rpx 5rpx 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  float: left;
+  width: 600rpx;
+  margin-left: 75rpx;
+  margin-right: 75rpx;
+  margin-top: 20rpx;
+}
+
+.bg {
+  float: left;
+  width: 100%;
+  height: 1200rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,19 @@
+<!--pages/mygame/mygame.wxml-->
+<button bindtap='onShowGame'>showGame</button>
+
+<view class='mask'>
+    <view class='items'>
+        <block wx:for='{{itemsClass}}' wx:key='{{index}}'>
+            <view class='item  {{itemsClass[index]}}  item{{index+1}} {{rotateIndex==index?"rotate":" "}}' data-index='{{index}}' catchtap='onSelectRotateIndex'>
+                <view class='item-text' data-index='{{index}}' catchtap='onSelectRotateIndex'>{{blessText[index]?blessText[index]:index}}</view>
+                <view class='item-bg' data-index='{{index}}' catchtap='onSelectRotateIndex'></view>
+            </view>
+        </block>
+    </view>
+    <button bindtap='onChange'>onChange</button>
+</view>
+
+<!--<view class='item  {{itemsClass[index]}}  item{{index+1}} {{rotateIndex==index?"rotate":" "}}' data-index='{{index}}' catchtap='onSelectRotateIndex'>
+                    <view class='item-text' data-index='{{index}}' catchtap='onSelectRotateIndex'>{{blessText[index]?blessText[index]:index}}</view>
+                    <view class='item-bg' data-index='{{index}}' catchtap='onSelectRotateIndex'></view>
+                </view>  -->

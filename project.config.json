@@ -1,0 +1,80 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wx777c96e46a6d2a4d",
+	"projectname": "new-year-game",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "packredpacket",
+					"pathName": "pages/packredpacket/packredpacket",
+					"query": "",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wx777c96e46a6d2a4d",
+						"extraData": "1111"
+					}
+				},
+				{
+					"id": -1,
+					"name": "game",
+					"pathName": "pages/game/game",
+					"query": "",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wx777c96e46a6d2a4d",
+						"extraData": "1111"
+					}
+				},
+				{
+					"id": -1,
+					"name": "yjj",
+					"pathName": "pages/yjj/yjj",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "loading",
+					"pathName": "pages/loading/loading",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mygame",
+					"pathName": "pages/mygame/mygame",
+					"query": ""
+				}
+			]
+		}
+	}
+}

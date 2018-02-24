@@ -1,0 +1,64 @@
+<!--pages/packredpacket/packredpacket.wxml-->
+
+
+
+<view class='main'>
+  <view class='line'>
+    <label>设置难度</label>
+    <view class='right-content'>
+      <view class='flex-row hardDegress'>
+        <button size='mini' bindtap='onHardDegree' data-harddegree='1' class='hardDegreeBtn flex-item {{hardDegreeSelcted==1?"actived":""}}'>简单</button>
+        <button size='mini' bindtap='onHardDegree' data-harddegree='2' class='hardDegreeBtn  flex-item  {{hardDegreeSelcted==2?"actived":""}}'>正常</button>
+        <button size='mini' bindtap='onHardDegree' data-harddegree='3' class='hardDegreeBtn  flex-item   {{hardDegreeSelcted==3?"actived":""}}'>变态</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='line line2'>
+    <label>我的祝福</label>
+    <view class='right-content'>
+      <view class='flex-row blessing'>
+        <button size='mini'  bindtap='onBless' data-blessindex='1' class='blessing-item flex-item  {{blessSelected==1?"actived":""}}'>狗富贵呀一定旺</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='2' class='blessing-item  flex-item  {{blessSelected==2?"actived":""}}'>健康好运狗gogo</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='3' class='blessing-item  flex-item  {{blessSelected==3?"actived":""}}'>升职加薪旺旺旺</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='4' class='blessing-item flex-item  {{blessSelected==4?"actived":""}}'>学业进步猛如狗</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='5' class='blessing-item  flex-item  {{blessSelected==5?"actived":""}}'>年年十八萌萌哒</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='6' class='blessing-item  flex-item  {{blessSelected==6?"actived":""}}'>自定义祝福语</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='input-view' wx:if='{{blessSelected==6}}'>
+    <!-- <label> -->
+      <text class='label'>自定义祝福</text>
+      <input placeholder='填写自定义祝福（最多的10字符）' placeholder-class="phcolor"/>
+    <!-- </label> -->
+  </view>
+  <view class='input-view'>
+    <!-- <label> -->
+      <text class='label'>设置赏金</text>
+      <input placeholder='填写打赏总金额（至少1元）' type='digit' placeholder-class="phcolor"/>
+      <text class='unit'>元</text>
+    <!-- </label> -->
+  </view>
+  <view class='input-view'>
+    <!-- <label> -->
+      <text class='label'>设置数量</text>
+      <input placeholder='填写打赏个数（最多100个）' type='number' placeholder-class="phcolor"/>
+      <text class='unit'>个</text>
+    <!-- </label> -->
+  </view>
+
+
+  <view class='payFee'>
+    <text>需支付¥0.00服务费</text>
+  </view>
+
+  <button class='btn-submit'>生成翻牌PK</button>
+</view>
+
+<view class='bottom-link'>
+  <text bindtap='showPlayWay'>玩法介绍</text>
+  <text class='line-mid'>|</text>
+  <text>联系客服</text>
+</view>

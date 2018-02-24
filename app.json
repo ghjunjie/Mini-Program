@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/game/game",
+    "pages/logs/logs",
+    "pages/packredpacket/packredpacket",
+    "pages/loading/loading",
+    "pages/canvas/canvas",
+    "pages/mygame/mygame",
+    "pages/yjj/yjj"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#cda76e",
+    "navigationBarTitleText": "新春翻一番",
+    "backgroundColor":"#F1F1F1",
+    "navigationBarTextStyle":"white"
+  },
+  "debug": true
+  
+}

@@ -1,0 +1,11 @@
+<view class='bg' style='height:{{_height}}px'>
+  <view class='box'>
+    <view id="{{item.id}}" animation="{{item._animation}}" bindtap='hideAnimation' wx:key="index" wx:for="{{startAnimations}}" class='common' wx:for-index="index" hidden="{{item.isHide}}">
+      <text>狗</text>
+    </view>
+  </view>
+  <view class='box' animation="{{animationScaleData}}">
+    <view animation="{{animationRotateData}}" wx:key="index" wx:for="{{items}}" class='common_noBg' wx:for-index="index">
+    </view>
+  </view>
+</view>

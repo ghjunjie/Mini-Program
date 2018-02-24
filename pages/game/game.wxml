@@ -1,0 +1,99 @@
+<!--pages/game/game.wxml-->
+<button bindtap='animatText'>actionStart</button>
+<view wx:if="{{showCoupon}}" class='coupon-box'>
+<view animation="{{couponPanelShow}}" class='coupon-panel'>
+<image src='{{uImg}}' class='u-img'></image>
+<text class='u-name'>{{userName}}</text>
+<text class='greeting-words'>祝你“狗年大吉”</text>
+<view class='get-money'>
+<text class='u-money'>{{getMoney}}</text>元
+</view>
+<text class='creat-one-btn'>再发一个 ></text>
+<view class='coupon-bg'></view>
+</view>
+<view class='black-bg-cover'></view>
+<text class='close-coupon-panel-btn' bindtap='closeCouponPanel'>x</text>
+</view>
+<view wx:if="{{showGame}}" class='bg'>
+<view class='chart-group'>
+    <view wx:if="{{start}}" animation="{{animaData1}}" data-posx="{{posx1}}" data-posy="{{posy1}}" style='left:{{pos1Left}}px;top:{{pos1Top}}px' class='chart chart1' bindtap='scalebig' id='s1'>
+    <text class='{{displaytype1}} {{dogbg}}' id='1'>{{txt1}}</text>
+    <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData2}}" data-posx="{{posx2}}" data-posy="{{posy2}}" style='left:{{pos2Left}}px;top:{{pos2Top}}px' class='chart chart2' bindtap='scalebig' id='s2'>
+      <text class='{{displaytype2}} {{dogbg}}' id='2'>{{txt2}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData3}}" data-posx="{{posx3}}" data-posy="{{posy3}}" style='left:{{pos3Left}}px;top:{{pos3Top}}px' class='chart chart3' bindtap='scalebig' id='s3'>
+      <text class='{{displaytype3}} {{dogbg}}' id='3'>{{txt3}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData4}}" data-posx="{{posx4}}" data-posy="{{posy4}}" style='left:{{pos4Left}}px;top:{{pos4Top}}px' class='chart chart4' bindtap='scalebig' id='s4'>
+      <text class='{{displaytype4}} {{dogbg}}' id='4'>{{txt4}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData5}}" data-posx="{{posx5}}" data-posy="{{posy5}}" style='left:{{pos5Left}}px;top:{{pos5Top}}px' class='chart chart5' id='s5'>
+      <text class='{{displaytype5}} {{dogbg5}}' bindtap='scalebig' id='5'>{{txt5}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData6}}" data-posx="{{posx6}}" data-posy="{{posy6}}" style='left:{{pos6Left}}px;top:{{pos6Top}}px' class='chart chart6' bindtap='scalebig' id='s6'>
+      <text class='{{displaytype6}} {{dogbg6}}' id='6'>{{txt6}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData7}}" data-posx="{{posx7}}" data-posy="{{posy7}}" style='left:{{pos7Left}}px;top:{{pos7Top}}px' class='chart chart7' bindtap='scalebig' id='s7'>
+      <text class='{{displaytype7}} {{dogbg7}}' id='7'>{{txt7}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData8}}" data-posx="{{posx8}}" data-posy="{{posy8}}" style='left:{{pos8Left}}px;top:{{pos8Top}}px' class='chart chart8' bindtap='scalebig' id='s8'>
+      <text class='{{displaytype8}} {{dogbg8}}' id='8'>{{txt8}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData9}}" data-posx="{{posx9}}" data-posy="{{posy9}}" style='left:{{pos9Left}}px;top:{{pos9Top}}px' class='chart chart9' bindtap='scalebig' id='s9'>
+      <text class='{{displaytype9}} {{dogbg9}}' id='9'>{{txt9}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData10}}" data-posx="{{posx10}}" data-posy="{{posy10}}" style='left:{{pos10Left}}px;top:{{pos10Top}}px' class='chart chart10' bindtap='scalebig' id='s10'>
+      <text class='{{displaytype10}} {{dogbg10}}' id='10'>{{txt10}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData11}}" data-posx="{{posx11}}" data-posy="{{posy11}}" style='left:{{pos11Left}}px;top:{{pos11Top}}px' class='chart chart11' bindtap='scalebig' id='s11'>
+      <text class='{{displaytype11}} {{dogbg11}}' id='11'>{{txt11}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData12}}" data-posx="{{posx12}}" data-posy="{{posy12}}" style='left:{{pos12Left}}px;top:{{pos12Top}}px' class='chart chart12' bindtap='scalebig' id='s12'>
+      <text class='{{displaytype12}} {{dogbg12}}' id='12'>{{txt12}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData13}}" data-posx="{{posx13}}" data-posy="{{posy13}}" style='left:{{pos13Left}}px;top:{{pos13Top}}px' class='chart chart13' bindtap='scalebig' id='s13'>
+      <text class='{{displaytype13}} {{dogbg}}' id='13'>{{txt13}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData14}}" data-posx="{{posx14}}" data-posy="{{posy14}}" style='left:{{pos14Left}}px;top:{{pos14Top}}px' class='chart chart14' bindtap='scalebig' id='s14'>
+      <text class='{{displaytype14}} {{dogbg}}' id='14'>{{txt14}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData15}}" data-posx="{{posx15}}" data-posy="{{posy15}}" style='left:{{pos15Left}}px;top:{{pos15Top}}px' class='chart chart15' bindtap='scalebig' id='s15'>
+      <text class='{{displaytype15}} {{dogbg}}' id='15'>{{txt15}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+    <view wx:if="{{start}}" animation="{{animaData16}}" data-posx="{{posx16}}" data-posy="{{posy16}}" style='left:{{pos16Left}}px;top:{{pos16Top}}px' class='chart chart16' bindtap='scalebig' id='s16'>
+      <text class='{{displaytype16}} {{dogbg}}' id='16'>{{txt16}}</text>
+      <view wx:if="{{turnRun}}" class='dog-bg-base'></view>
+    </view>
+</view>
+<view wx:if="{{showTopTips}}" class='top-tips-box'>
+<text class='top-tips'>哪个是“{{selectText}}”字？</text>
+<view class='top-tips2'>猜中获得{{userName}}的<text class='color1'>打赏</text></view>
+</view>
+<view wx:if="{{ansWrong}}" class='bottom-tips'>
+    <text class='answer-tips'>猜错了</text>
+    <view class='bottom-btns'>
+    <text class='again-btn' bindtap='tryAgain'>再试一次</text>
+    <text class='cancel-btn' bindtap='closeGame'>放弃</text>
+    </view>
+</view>
+<view wx:if="{{ansRight}}" class='bottom-tips'>
+    <text class='answer-tips'>猜对了</text>
+</view>
+<view class='black-bg-cover'></view>
+</view>

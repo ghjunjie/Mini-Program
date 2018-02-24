@@ -1,0 +1,87 @@
+// pages/packredpacket/packredpacket.js
+
+const dialog = require('../../utils/dialog.js')
+
+Page({
+
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        hardDegreeSelcted:1,
+        blessSelected:1,
+        showCanvasImg:false,
+    },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面隐藏
+     */
+    onHide: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面卸载
+     */
+    onUnload: function () {
+
+    },
+
+    /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+    onPullDownRefresh: function () {
+
+    },
+
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom: function () {
+
+    },
+
+    /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage: function () {
+
+    },
+    onHardDegree:function(ev){
+        const dataset = ev.target.dataset;
+        this.setData({
+            hardDegreeSelcted: dataset.harddegree
+        })
+    },
+    onBless: function (ev){
+        const dataset = ev.target.dataset;
+        this.setData({
+            blessSelected: dataset.blessindex
+        })
+    },
+    showPlayWay: function () {
+        dialog.open('玩法介绍', '新年为好友送祝福新玩法！\r\n你可以设置一个带奖励的猜牌游戏，\r\n好友挑战成功获得你的奖励。', function () { });
+
+    }
+})

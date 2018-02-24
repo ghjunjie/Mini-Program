@@ -1,0 +1,11 @@
+<!--pages/yjj/yjj.wxml-->
+<text>pages/yjj/yjj.wxml</text>
+<button bindtap='onSaveCanvas'>保存为图片</button>
+<view class='imgBox' hidden='{{!showCanvasImg}}'>
+    <image src='{{canvasImg}}'></image>
+</view>
+<view class='canvasBox'>
+    <canvas canvas-id='canvas' class='canvas'>
+    </canvas>
+</view>
+

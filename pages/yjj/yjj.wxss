@@ -1,0 +1,34 @@
+/* pages/yjj/yjj.wxss */
+
+.canvasBox{
+    width: 750rpx;
+    height: 870rpx;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 150%;
+    margin-top: -435rpx;
+}
+.canvas{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* background-color: red; */
+}
+.imgBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+.imgBox image{
+    width: 750rpx;
+    height: 870rpx;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -470rpx;
+}
