@@ -13,23 +13,28 @@ Page({
         itemsClass: itemsClass,//牌排序/位置
         hardDegree: 'low',//难易度设置
         rotateIndex: -1,//当前翻转下标
-        blessText: '新年好运旺旺旺',//祝福语设置
-        canClickItem:true,//是否可以选中该牌
+        blessText: '新年好运借旺旺',//祝福语设置
+        canClickItem:false,//是否可以选中该牌(洗牌时禁用点击)
         canShowPlayBtn:false,//是否显示再玩一次按钮
         canStartInAnimate:true,//是否开始播放动画
         hideInAnimition:true,//隐藏入场动画
         showRewardText:false,//是否显示顶部提示信息
         hideNoFirstInItem: false,//开始隐藏入场的动画(除了第一个其余隐藏)
         showItem:false,//是否显示玩法item
+        guessRightState:false,//是否已经猜对答案
+        canShowGamePage:false,//显示游戏页面
     },
     onLoad: function (options) {
         //   this.playVoice('yell');
     },
-    onShowGame() {
+    onShowGame(){
+
         this.setData({//解决animation bug
             canStartInAnimate: false,
             hideInAnimition:false,//显示入场动画
+            canShowGamePage:true,
         });
+        this.playVoice('in');
         setTimeout(() => {//解决animation bug
             this.setData({
                 canStartInAnimate: true
@@ -56,6 +61,9 @@ Page({
                 showItem:true
             })
         }, 3600);
+        setTimeout(() => {//开始玩游戏
+            this.onPlayAgain();
+        }, 4600);
     },
     onPlayAgain(){//再玩一次/开始玩游戏
         if (this.data.rotateIndex!=-1){
@@ -125,15 +133,38 @@ Page({
             rotateIndex: event.currentTarget.dataset.index,//翻牌先
             canClickItem:false//设置禁用点击
         });
-        if(!false){//没猜中
+        if (event.currentTarget.dataset.index!=4){//没猜中
             this.setData({
                 canShowPlayBtn:true
+            });
+            if (event.currentTarget.dataset.index < 4 || event.currentTarget.dataset.index > 10){
+                this.playVoice('laugh');
+            }else{
+                this.playVoice('yell');
+            }
+        } else {
+            this.setData({
+                guessRightState: true
             })
-        }else{
-
+            this.playVoice('areyouok');
         }
     },
-    playVoice(voiceType) {
+    onGiveUp(){
+        this.setData({
+            itemsClass: itemsClass,//牌排序/位置
+            rotateIndex: -1,//当前翻转下标
+            canClickItem: false,//是否可以选中该牌
+            canShowPlayBtn: false,//是否显示再玩一次按钮
+            canStartInAnimate: true,//是否开始播放动画
+            hideInAnimition: true,//隐藏入场动画
+            showRewardText: false,//是否显示顶部提示信息
+            hideNoFirstInItem: false,//开始隐藏入场的动画(除了第一个其余隐藏)
+            showItem: false,//是否显示玩法item
+            guessRightState: false,//是否已经猜对答案
+            canShowGamePage: false,//显示游戏页面
+        })
+    },
+    playVoice(voiceType) {//音乐跑起来
         const innerAudioContext = wx.createInnerAudioContext();
         innerAudioContext.autoplay = true;
         innerAudioContext.src = voiceTypes[voiceType];

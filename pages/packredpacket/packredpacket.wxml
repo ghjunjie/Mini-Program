@@ -18,12 +18,12 @@
     <label>我的祝福</label>
     <view class='right-content'>
       <view class='flex-row blessing'>
-        <button size='mini'  bindtap='onBless' data-blessindex='1' class='blessing-item flex-item  {{blessSelected==1?"actived":""}}'>狗富贵呀一定旺</button>
-        <button size='mini'  bindtap='onBless' data-blessindex='2' class='blessing-item  flex-item  {{blessSelected==2?"actived":""}}'>健康好运狗gogo</button>
-        <button size='mini'  bindtap='onBless' data-blessindex='3' class='blessing-item  flex-item  {{blessSelected==3?"actived":""}}'>升职加薪旺旺旺</button>
-        <button size='mini'  bindtap='onBless' data-blessindex='4' class='blessing-item flex-item  {{blessSelected==4?"actived":""}}'>学业进步猛如狗</button>
-        <button size='mini'  bindtap='onBless' data-blessindex='5' class='blessing-item  flex-item  {{blessSelected==5?"actived":""}}'>年年十八萌萌哒</button>
-        <button size='mini'  bindtap='onBless' data-blessindex='6' class='blessing-item  flex-item  {{blessSelected==6?"actived":""}}'>自定义祝福语</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='1' class='blessing-item flex-item  {{blessSelected==1?"actived":""}}'>aaaa</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='2' class='blessing-item  flex-item  {{blessSelected==2?"actived":""}}'>bbbb</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='3' class='blessing-item  flex-item  {{blessSelected==3?"actived":""}}'>cccc</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='4' class='blessing-item flex-item  {{blessSelected==4?"actived":""}}'>dddd</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='5' class='blessing-item  flex-item  {{blessSelected==5?"actived":""}}'>eeee</button>
+        <button size='mini'  bindtap='onBless' data-blessindex='6' class='blessing-item  flex-item  {{blessSelected==6?"actived":""}}'>ggg</button>
       </view>
     </view>
   </view>
